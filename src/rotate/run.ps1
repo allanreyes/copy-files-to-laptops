@@ -12,6 +12,7 @@ $password = ([char[]]([char]97..[char]122) + ([char[]]([char]65..[char]90)) + 0.
 $securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
 
 #Connect to Azure Keyvault and create a new version of the secret
+# Don't forget to add Key Vault Secrets Officer with keyvault scope to the function app
 Set-AzKeyVaultSecret -VaultName $env:KeyVaultName -Name $sitecode -SecretValue $securePassword
 
 Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{

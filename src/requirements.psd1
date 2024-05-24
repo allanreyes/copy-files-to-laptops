@@ -6,4 +6,5 @@
     # 'Az' = 'MAJOR_VERSION.*'
     '7Zip4Powershell' = '1.9.0'
     'Az.KeyVault' = '5.2.2'
+    'Az.LogicApp' = '1.5.1'
 }
